@@ -30,8 +30,13 @@ generate.addEventListener("click", evt => {
         amount.style.border = "1px solid red";
         return false;
     }
-    if(amount.value < 1200){
+    if(amount.value < 300){
         alert("Deposit a minimum of 1,200 waves");
+        amount.style.border = "1px solid red";
+        return false;
+    }
+    if(amount.value > 200000){
+        alert("Deposit a maximum of 200,000 waves");
         amount.style.border = "1px solid red";
         return false;
     }
@@ -46,7 +51,7 @@ generate.addEventListener("click", evt => {
         generate.style.display = "none";
         roll.style.display = "none";
     },1000);
-});
+}); 
 
 function myFunction() {
     var copyText = document.getElementById("myInput");
@@ -62,3 +67,4 @@ function myFunction() {
     var tooltip = document.getElementById("myTooltip");
     tooltip.innerHTML = "Copy to clipboard";
   }
+

