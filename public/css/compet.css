@@ -232,7 +232,7 @@
       left: 0;
       background: linear-gradient(to bottom, rgb(90, 129, 234) 35%, rgb(124, 156, 242));
       height: 100%;
-      width: 25%;
+      width: 23%;
       animation: grow 2s forwards;
       box-shadow: 0 0 8px 1px white inset;
     }
