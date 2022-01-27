@@ -16,8 +16,8 @@ amount.addEventListener("input", evt => {
 });
 
 bonus.addEventListener("input", evt => {
-    amount.value = evt.target.value / 2;
-    amount2.value = evt.target.value / 2;
+    amount.value = evt.target.value / 3;
+    amount2.value = evt.target.value / 3;
     paymentDiv.style.display = "none";
     generate.style.display = "block";
 });
