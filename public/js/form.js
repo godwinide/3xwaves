@@ -8,7 +8,7 @@ const roll = document.getElementById("roll");
 
 
 amount.addEventListener("input", evt => {
-    bonus.value = evt.target.value * 2;
+    bonus.value = evt.target.value * 3;
     amount2.value = evt.target.value;
     paymentDiv.style.display = "none";
     generate.style.display = "block";
