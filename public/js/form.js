@@ -6,13 +6,11 @@ const generate = document.getElementById("generate");
 const paymentDiv = document.getElementById("paymentDiv");
 const roll = document.getElementById("roll");
 
-
 amount.addEventListener("input", evt => {
     bonus.value = evt.target.value * 3;
     amount2.value = evt.target.value;
     paymentDiv.style.display = "none";
     generate.style.display = "block";
-
 });
 
 bonus.addEventListener("input", evt => {
