@@ -68,6 +68,9 @@
     width: 90%;
     margin: auto;
   }
+  .network{
+    width: 100% !important;
+  }
   }
   
   .steps-wrap {
@@ -174,7 +177,44 @@
 
   .wrap-input img{
     margin:  0 !important;
+    background-color: #2c303a;
+  }
+
+  .network{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 15em;
+    margin-bottom: 1em;
+    cursor: pointer;
+  }
+
+  .network p {
+    margin: 0 !important;
+    font-size: .9em;
+  }
+
+  .network .circle{
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
     background-color: #19202e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .network .circle div{
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #4F9CC0;
+    visibility: hidden;
+  }
+
+  #qrimg2{
+    visibility: hidden;
   }
   
   #generate {

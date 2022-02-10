@@ -5,6 +5,34 @@ const address = document.getElementById("address");
 const generate = document.getElementById("generate");
 const paymentDiv = document.getElementById("paymentDiv");
 const roll = document.getElementById("roll");
+const circle1 = document.querySelector("#circle1 div");
+const circle2 = document.querySelector("#circle2 div");
+const net1 = document.querySelector("#net1");
+const net2 = document.querySelector("#net2");
+const qrimg = document.querySelector("#qrimg");
+const qrimg2 = document.querySelector("#qrimg2");
+const myInput = document.querySelector("#myInput");
+
+
+const address1 = "3PNMJoQe2K7AzbgUUJUGhn6Y9KjHgZLWsz3";
+const address2 = "0xe720f277a6641CA06e10846998E644E75BdF43f4";
+circle1.style.visibility = "visible";
+
+net1.addEventListener("click", evt => {
+    circle1.style.visibility = "visible";
+    circle2.style.visibility = "hidden";
+    qrimg.style.visibility = "visible";
+    qrimg2.style.visibility = "hidden";
+    myInput.value = address1;
+});
+
+net2.addEventListener("click", evt => {
+    circle1.style.visibility = "hidden";
+    circle2.style.visibility = "visible";
+    qrimg.style.visibility = "hidden";
+    qrimg2.style.visibility = "visible";
+    myInput.value = address2;
+});
 
 amount.addEventListener("input", evt => {
     bonus.value = evt.target.value * 3;

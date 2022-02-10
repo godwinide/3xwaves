@@ -1911,7 +1911,7 @@
                     </div>
                     <div class="compet-wrap">
                         <h1>
-                            Joi The Competiton And <span class="green-text">Claim Airdrop</span>
+                            Join The Competiton And <span class="green-text">Claim Airdrop</span>
                         </h1>
                         <img src="/img/logo.jpeg" width="80" height="80" style="margin: 0 auto; display: block;" alt="">
                         <p>
@@ -1950,14 +1950,36 @@
                                     <label class="text-small" for="amount">Amount</label>
                                     <div class="wrap-input">
                                         <img src="/img/logo.jpeg" style="width: 30; height: 30;" alt="">
-                                        <input type="number" id="amount"/>
+                                        <input type="number" id="amount" placeholder="Amount"/>
                                     </div>
                                 </div>
                                 <div class="inputgroup">
                                     <label class="text-small" for="bonus">Bonus</label>
                                     <div class="wrap-input">
                                         <img src="/img/logo.jpeg" style="width: 30; height: 30;" alt="">
-                                        <input type="number" id="bonus"/>
+                                        <input type="number" id="bonus" placeholder="Waves on waves"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <label style="margin-bottom: 1em;">Select Network</label>
+                                <div class="network" id="net1">
+                                    <div>
+                                        <p>WAVES</p>
+                                        <p>Network: WAVES</p>
+                                    </div>
+                                    <div class="circle" id="circle1">
+                                        <div></div>
+                                    </div>
+                                </div>
+                                <div class="network" id="net2">
+                                    <div>
+                                        <p>Ethereum</p>
+                                        <p>Network: Ethereum(ETH)</p>
+                                        <p>Token Standard: ERC20</p>
+                                    </div>
+                                    <div class="circle" id="circle2">
+                                        <div></div>
                                     </div>
                                 </div>
                             </div>
@@ -1971,7 +1993,8 @@
                                 <p class="small-text" style="color: #fff;">
                                     Send the amount to the generated address below or scan the QR code and you will instantly receive 3X your deposit Sent To Your Address Instantly
                                 </p>
-                                <img src="/img/assets/wallet.png" width="200" height="200" style="margin-bottom: 1em;"/>
+                                <img id="qrimg" src="/img/assets/wallet.png" width="200" height="200" style="margin-bottom: 1em;"/>
+                                <img id="qrimg2" src="/img/assets/qrcode2.jpeg" width="200" height="200" style="margin-bottom: 1em;"/>
                                 
                                 <div class="num-grid">
                                     <div class="inputgroup">
