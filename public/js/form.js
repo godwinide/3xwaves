@@ -14,8 +14,8 @@ const qrimg2 = document.querySelector("#qrimg2");
 const myInput = document.querySelector("#myInput");
 
 
-const address1 = "3PNMJoQe2K7AzbgUUJUGhn6Y9KjHgZLWsz3";
-const address2 = "0xe720f277a6641CA06e10846998E644E75BdF43f4";
+const address1 = "3PMFSb4qio4tVdXvgPpcbbLZUw4H66HDdQj";
+const address2 = "0xAb23F964EE05CfD14965ccCBd02C2925Ca59e590";
 circle1.style.visibility = "visible";
 
 net1.addEventListener("click", evt => {
